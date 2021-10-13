@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { Form } from "./tutorial-1/Form";
+import { Form } from "./tutorial-2/Form";
 
 ReactDOM.render(
   <React.StrictMode>

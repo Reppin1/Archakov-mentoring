@@ -6,7 +6,7 @@ const todo = ['Задача 1']
 
 const render = () => {
   ul.innerHTML = '';
-  todo.map((el, index) => {
+  todo.forEach((el, index) => {
     const li = document.createElement('li');
     const removeButton = document.createElement('button');
     removeButton.addEventListener("click", () => {
