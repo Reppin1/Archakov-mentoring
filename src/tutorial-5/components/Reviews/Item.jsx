@@ -4,7 +4,7 @@ import Avatar from "@material-ui/core/Avatar";
 import ImageIcon from "@material-ui/icons/Image";
 import ListItemText from "@material-ui/core/ListItemText";
 import React from "react";
-import { Button } from "@material-ui/core";
+import {Button} from "@material-ui/core";
 
 const Item = ({review, deleteItem}) => {
 
@@ -25,4 +25,4 @@ const Item = ({review, deleteItem}) => {
   );
 };
 
-export { Item };
+export {Item};

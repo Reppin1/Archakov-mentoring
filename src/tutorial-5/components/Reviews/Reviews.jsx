@@ -1,7 +1,7 @@
-import { makeStyles } from "@material-ui/core/styles";
+import {makeStyles} from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import React from "react";
-import { Item } from "./Item";
+import {Item} from "./Item";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,4 +33,4 @@ export default function Reviews({reviews, setComments}) {
   );
 }
 
-export { Reviews };
+export {Reviews};

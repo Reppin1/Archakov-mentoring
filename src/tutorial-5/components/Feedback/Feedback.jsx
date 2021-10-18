@@ -1,8 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import { Button } from "@material-ui/core";
-import { v4 as uuidv4 } from 'uuid';
+import {Button} from "@material-ui/core";
+import {v4 as uuidv4} from 'uuid';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Feedback({ setComments }) {
+export default function Feedback({setComments}) {
   const classes = useStyles();
   const [name, setName] = React.useState('')
   const [email, setEmail] = React.useState('')
@@ -40,7 +40,13 @@ export default function Feedback({ setComments }) {
   const handleSubmit = (event) => {
     event.preventDefault()
     if (name.trim() && email.trim() && review.trim()) {
-      setComments((prev) => [...prev, {id: uuidv4(), fullName: name, email: email, createdAt: new Date(), text: review}])
+      setComments((prev) => [...prev, {
+        id: uuidv4(),
+        fullName: name,
+        email: email,
+        createdAt: new Date(),
+        text: review
+      }])
     }
     clear()
   }
@@ -51,13 +57,16 @@ export default function Feedback({ setComments }) {
         <h3>Обратная связь:</h3>
       </div>
       <div>
-        <TextField required id="outlined-basic" value={name} onChange={changeName} label="Имя" variant="outlined" placeholder="Введите имя" />
+        <TextField required id="outlined-basic" value={name} onChange={changeName} label="Имя" variant="outlined"
+                   placeholder="Введите имя" />
       </div>
       <div>
-        <TextField required id="outlined-basic" type="email" value={email} onChange={changeEmail} label="Почта" variant="outlined" placeholder="Введите почту" />
+        <TextField required id="outlined-basic" type="email" value={email} onChange={changeEmail} label="Почта"
+                   variant="outlined" placeholder="Введите почту" />
       </div>
       <div>
-        <TextField required id="outlined-basic" value={review} onChange={changeText} label="Текст" variant="outlined" placeholder="Оставьте отзыв" />
+        <TextField required id="outlined-basic" value={review} onChange={changeText} label="Текст" variant="outlined"
+                   placeholder="Оставьте отзыв" />
       </div>
       <Button type="submit" variant="contained">Отправить</Button>
     </form>
